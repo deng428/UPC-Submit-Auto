@@ -18,4 +18,4 @@ _务必暂停脚本并手动上报 2天！_
 1.将此代码仓库克隆到自己的 github 账号下
 2.在自己仓库的Settings -> Secrets 中添加 USERNAME 和 PASSWORD 两个环境变量，并将自己的学号和登录密码填入相应的value中
 
-如果遇到问题请查询 Github Actions 的相关资料
+如果遇到问题请查询 Github Actions 的相关资料.
