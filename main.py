@@ -79,13 +79,19 @@ message['To'] = Header("测试", 'utf-8')
 subject = '疫情防控通'
 message['Subject'] = Header(subject, 'utf-8')
 
-try:
-    smtpObj = smtplib.SMTP()
-    smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
-    smtpObj.login(mail_user, mail_pass)
-    smtpObj.sendmail(sender, receivers, message.as_string())
-    print("邮件发送成功");
-except smtplib.SMTPException:
-    print
-    "Error: 无法发送邮件"
+smtpObj = smtplib.SMTP()
+smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
+smtpObj.login(mail_user, mail_pass)
+print(smtpObj.sendmail(sender, receivers, message.as_string()))
+
+print("邮件发送成功")
+# try:
+#     smtpObj = smtplib.SMTP()
+#     smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
+#     smtpObj.login(mail_user, mail_pass)
+#     smtpObj.sendmail(sender, receivers, message.as_string())
+#     print("邮件发送成功");
+# except smtplib.SMTPException:
+#     print
+#     "Error: 无法发送邮件"
 print(saveJson['m'])
